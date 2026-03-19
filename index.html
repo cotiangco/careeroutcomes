@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Outcomes Report, Columbia Climate School, MA in Climate and Society</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+  :root {
+    --columbia-blue: #1A4B84;
+    --columbia-blue-light: #2D6BB4;
+    --columbia-blue-pale: #E8F0FA;
+    --columbia-blue-mist: #F4F8FC;
+    --warm-gray: #F7F6F4;
+    --text-primary: #1A1A1A;
+    --text-secondary: #4A4A4A;
+    --text-tertiary: #7A7A7A;
+    --accent-green: #2E7D5B;
+    --accent-green-light: #E8F5EE;
+    --accent-amber: #C47F17;
+    --accent-amber-light: #FEF7E8;
+    --border-light: #E5E5E5;
+    --white: #FFFFFF;
+    --track-gov: #1A4B84;
+    --track-energy: #D4760A;
+    --track-finance: #2E7D5B;
+    --track-research: #7B4FA0;
+    --track-consulting: #B4436C;
+    --track-comm: #3A7CA5;
+    --track-conservation: #4A8C5C;
+    --track-policy: #8B6914;
+    --track-intl: #C0392B;
+    --track-corp: #2C3E50;
+    --track-community: #E67E22;
+    --track-tech: #16A085;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-primary);
+    background: var(--white);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== COVER SECTION ===== */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(170deg, var(--columbia-blue) 0%, #0D2B4F 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 80%;
+    height: 200%;
+    background: radial-gradient(ellipse, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+  }
+
+  .cover-school {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 3rem;
+  }
+
+  .cover-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1.2;
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .cover-subtitle {
+    font-size: 1.15rem;
+    font-weight: 300;
+    max-width: 550px;
+    opacity: 0.8;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  .cover-program {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+
+  /* ===== MAIN LAYOUT ===== */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  section {
+    padding: 5rem 0;
+  }
+
+  /* ===== SECTION HEADERS ===== */
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--columbia-blue-light);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .section-intro {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 680px;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+
+  .divider {
+    width: 48px;
+    height: 2px;
+    background: var(--columbia-blue-light);
+    margin: 0 0 3rem 0;
+    opacity: 0.5;
+  }
+
+  /* ===== AT A GLANCE ===== */
+  .glance {
+    background: var(--columbia-blue-mist);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .stat-card {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+  }
+
+  .stat-number {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--columbia-blue);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+  }
+
+  .stat-context {
+    font-size: 0.78rem;
+    color: var(--text-tertiary);
+    margin-top: 0.35rem;
+    font-style: italic;
+  }
+
+  .class-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .class-card {
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+  }
+
+  .class-card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--columbia-blue);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .class-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  .class-detail span:last-child {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  /* ===== CLIMATE LENS SECTION ===== */
+  .climate-lens {
+    background: var(--white);
+  }
+
+  .lens-quote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--columbia-blue);
+    padding: 2.5rem;
+    background: var(--columbia-blue-pale);
+    border-left: 3px solid var(--columbia-blue-light);
+    border-radius: 0 12px 12px 0;
+    margin: 2.5rem 0;
+    font-weight: 400;
+  }
+
+  /* ===== SECTOR BREAKDOWN ===== */
+  .sector-chart-area {
+    margin: 2.5rem 0;
+  }
+
+  .sector-year-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+  }
+
+  .sector-bars {
+    margin-bottom: 3rem;
+  }
+
+  .sector-bar-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 50px;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .sector-bar-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-align: right;
+    font-weight: 500;
+  }
+
+  .sector-bar-track {
+    height: 28px;
+    background: var(--columbia-blue-pale);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .sector-bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 1s ease-out;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+
+  .sector-bar-pct {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  /* ===== PROFESSIONAL TRACKS ===== */
+  .tracks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .track-card {
+    padding: 1.75rem;
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    transition: box-shadow 0.2s ease;
+  }
+
+  .track-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+
+  .track-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .track-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .track-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+  }
+
+  .track-pct {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+  }
+
+  .track-examples {
+    list-style: none;
+    padding: 0;
+  }
+
+  .track-examples li {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    padding: 0.3rem 0;
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .track-examples li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7rem;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--border-light);
+  }
+
+  /* ===== CURATED HIGHLIGHTS ===== */
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin: 2rem 0;
+  }
+
+  .highlight-item {
+    padding: 0.85rem 1.1rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    border-radius: 8px;
+    background: var(--warm-gray);
+    line-height: 1.5;
+  }
+
+  .highlight-item strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .highlight-item .org {
+    color: var(--text-tertiary);
+    font-size: 0.8rem;
+  }
+
+  /* ===== SUMMER EXPERIENCE ===== */
+  .summer-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .summer-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin: 1.5rem 0;
+  }
+
+  .summer-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-tertiary);
+    border-bottom: 2px solid var(--columbia-blue);
+  }
+
+  .summer-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-secondary);
+  }
+
+  .summer-table td:nth-child(2),
+  .summer-table td:nth-child(3),
+  .summer-table th:nth-child(2),
+  .summer-table th:nth-child(3) {
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /* ===== LOCATIONS ===== */
+  .locations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .location-block h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--columbia-blue);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .location-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+  }
+
+  .location-item span:last-child {
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 30px;
+    text-align: right;
+  }
+
+  /* ===== FULL LISTING TABLES ===== */
+  .appendix {
+    background: var(--columbia-blue-mist);
+    border-top: 1px solid var(--border-light);
+  }
+
+  .listing-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin: 1.5rem 0 3rem 0;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+  }
+
+  .listing-table thead th {
+    text-align: left;
+    padding: 0.85rem 1.1rem;
+    font-weight: 600;
+    font-size: 0.73rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    background: var(--columbia-blue);
+  }
+
+  .listing-table tbody tr {
+    transition: background 0.15s ease;
+  }
+
+  .listing-table tbody tr:nth-child(even) {
+    background: var(--columbia-blue-mist);
+  }
+
+  .listing-table tbody tr:hover {
+    background: var(--columbia-blue-pale);
+  }
+
+  .listing-table td {
+    padding: 0.6rem 1.1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    color: var(--text-secondary);
+  }
+
+  .listing-table td:first-child {
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .table-label {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--columbia-blue);
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: var(--columbia-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+
+  .footer-school {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+  }
+
+  .footer-note {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    line-height: 1.7;
+  }
+
+  /* ===== NAV ===== */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-light);
+    padding: 0.75rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .sticky-nav a {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+
+  .sticky-nav a:hover {
+    color: var(--columbia-blue);
+  }
+
+  /* ===== FIELD BREAKDOWN ===== */
+  .field-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .field-block h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--columbia-blue);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .field-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    font-size: 0.85rem;
+  }
+
+  .field-row .fname {
+    color: var(--text-secondary);
+    flex: 1;
+  }
+
+  .field-row .fcount {
+    color: var(--text-tertiary);
+    font-size: 0.8rem;
+    margin: 0 0.75rem;
+    min-width: 20px;
+    text-align: right;
+  }
+
+  .field-row .fpct {
+    font-weight: 600;
+    color: var(--columbia-blue);
+    min-width: 36px;
+    text-align: right;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .tracks-grid, .highlights-grid, .class-comparison, .locations-grid, .field-grid {
+      grid-template-columns: 1fr;
+    }
+    .sector-bar-row {
+      grid-template-columns: 120px 1fr 45px;
+    }
+    .summer-comparison {
+      grid-template-columns: 1fr;
+    }
+    .sticky-nav {
+      gap: 1rem;
+    }
+    .stat-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media print {
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+    html { font-size: 10pt; }
+    body { font-size: 10pt; line-height: 1.5; }
+    .sticky-nav { display: none !important; }
+    .cover {
+      min-height: auto;
+      padding: 3rem 2rem;
+      background: #1A4B84 !important;
+      color: #fff !important;
+      page-break-after: always;
+    }
+    .cover-school, .cover-title, .cover-subtitle, .cover-program { color: #fff !important; }
+    section { padding: 1.5rem 0; }
+    .container { max-width: 100%; padding: 0 1rem; }
+    .stat-card { border: 1px solid #ccc; }
+    .stat-number { font-size: 2rem; }
+    .track-card { break-inside: avoid; page-break-inside: avoid; border: 1px solid #ccc; }
+    .track-card:hover { box-shadow: none; }
+    .class-card { break-inside: avoid; page-break-inside: avoid; }
+    .listing-table { font-size: 7.5pt; }
+    .listing-table thead th { background: #1A4B84 !important; color: #fff !important; }
+    .listing-table tbody tr:nth-child(even) { background: #F4F8FC !important; }
+    .sector-bar-fill { -webkit-print-color-adjust: exact !important; }
+    .glance { background: #F4F8FC !important; }
+    .appendix { background: #F4F8FC !important; }
+    .footer { background: #1A4B84 !important; color: #fff !important; }
+    .footer-school, .footer-note { color: #fff !important; }
+    .lens-quote { background: #E8F0FA !important; border-left: 3px solid #2D6BB4 !important; }
+    .highlight-item { background: #F7F6F4 !important; }
+    .tracks-grid { grid-template-columns: 1fr 1fr; }
+    .highlights-grid { grid-template-columns: 1fr 1fr; }
+    h2, h3 { page-break-after: avoid; }
+    table { page-break-inside: auto; }
+    tr { page-break-inside: avoid; }
+    .track-icon { -webkit-print-color-adjust: exact !important; }
+    .field-row .fpct { color: #1A4B84 !important; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <div class="cover-school">Columbia Climate School</div>
+  <h1 class="cover-title">Career Outcomes Report</h1>
+  <p class="cover-subtitle">Where graduates of the MA in Climate and Society are building careers across sectors, industries, and geographies. Classes of 2024 &amp; 2025</p>
+  <div class="cover-program">MA in Climate and Society &nbsp;&bull;&nbsp; Classes of 2024 &amp; 2025</div>
+</div>
+
+<!-- ============ NAV ============ -->
+<nav class="sticky-nav">
+  <a href="#glance">At a Glance</a>
+  <a href="#lens">The Climate Lens</a>
+  <a href="#sectors">Sectors</a>
+  <a href="#tracks">Career Tracks</a>
+  <a href="#highlights">Curated Roles</a>
+  <a href="#summer">Summer</a>
+  <a href="#locations">Locations</a>
+  <a href="#appendix">Full Listings</a>
+</nav>
+
+<!-- ============ AT A GLANCE ============ -->
+<section class="glance" id="glance">
+  <div class="container">
+    <div class="section-label">Placement Overview</div>
+    <h2 class="section-title">At a Glance</h2>
+    <p class="section-intro">Across two graduating classes, Climate and Society students are entering the workforce at strong rates, landing in a remarkably wide range of roles.</p>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-number">88%</div>
+        <div class="stat-label">Class of 2025 Placed</div>
+        <div class="stat-context">Within 6 months of graduation</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">89%</div>
+        <div class="stat-label">Class of 2024 Placed</div>
+        <div class="stat-context">Within 6 months · 91% at 9 months</div>
+      </div>
+    </div>
+
+    <div class="class-comparison">
+      <div class="class-card">
+        <h3>Class of 2025</h3>
+        <div class="class-detail"><span>Full-time students</span><span>114</span></div>
+        <div class="class-detail"><span>Responded</span><span>90</span></div>
+        <div class="class-detail"><span>Placed at 6 months</span><span>79</span></div>
+        <div class="class-detail"><span>Furthering academic pursuits</span><span>2</span></div>
+        <div class="class-detail"><span>Placement rate</span><span>88%</span></div>
+      </div>
+      <div class="class-card">
+        <h3>Class of 2024</h3>
+        <div class="class-detail"><span>Full-time students</span><span>96</span></div>
+        <div class="class-detail"><span>Responded</span><span>84</span></div>
+        <div class="class-detail"><span>Placed at 6 months</span><span>75</span></div>
+        <div class="class-detail"><span>Furthering academic pursuits</span><span>5</span></div>
+        <div class="class-detail"><span>6-month placement rate</span><span>89%</span></div>
+        <div class="class-detail"><span>9-month placement rate</span><span>91%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE CLIMATE LENS ============ -->
+<section class="climate-lens" id="lens">
+  <div class="container">
+    <div class="section-label">About Our Graduates</div>
+    <h2 class="section-title">The Climate Lens</h2>
+    <p class="section-intro">Climate isn't a sector. It's a lens, one that touches every industry, every domain, every function. Our graduates don't learn "climate" in isolation. They learn how to apply an interdisciplinary climate perspective to the problems they want to solve.</p>
+
+    <div class="lens-quote">
+      Climate and Society graduates are uniquely qualified to apply their interdisciplinary climate curriculum to any sector and function: from decarbonization and resilience to environmental health and socio-political change, with an orientation towards evidence-based decision making and equitable outcomes.
+    </div>
+
+    <p class="section-intro" style="margin-bottom:1rem;">Students arrive with different professional and academic backgrounds, varying levels of experience, and distinct goals. There is no singular pathway. What unites them is the ability to see climate's intersection with everything, and the skills to act on it.</p>
+    <p class="section-intro" style="margin-bottom:1rem;">Graduates are adept at communicating the value and impact of climate work and are entrusted with building and stewarding the partnerships that accelerate climate action and progress.</p>
+    <p class="section-intro">The breadth of placements below is meant to inspire. These are real examples of how our graduates are working on climate and sustainability challenges across the economy.</p>
+  </div>
+</section>
+
+<!-- ============ SECTORS ============ -->
+<section id="sectors" style="background: var(--columbia-blue-mist); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+  <div class="container">
+    <div class="section-label">Post-Graduation Sectors</div>
+    <h2 class="section-title">Where Graduates Work</h2>
+    <p class="section-intro">Our graduates enter every major sector of the economy, a reflection of climate's reach into all domains of professional life.</p>
+
+    <div class="sector-chart-area">
+      <div class="sector-year-title">Class of 2025: By Sector</div>
+      <div class="sector-bars">
+        <div class="sector-bar-row">
+          <div class="sector-bar-label">Non-profit / NGO</div>
+          <div class="sector-bar-track"><div class="sector-bar-fill" style="width:38%; background: var(--columbia-blue);"></div></div>
+          <div class="sector-bar-pct">38%</div>
+        </div>
+        <div class="sector-bar-row">
+          <div class="sector-bar-label">Private Sector</div>
+          <div class="sector-bar-track"><div class="sector-bar-fill" style="width:31%; background: var(--accent-green);"></div></div>
+          <div class="sector-bar-pct">31%</div>
+        </div>
+        <div class="sector-bar-row">
+          <div class="sector-bar-label">Public / Government</div>
+          <div class="sector-bar-track"><div class="sector-bar-fill" style="width:15%; background: var(--accent-amber);"></div></div>
+          <div class="sector-bar-pct">15%</div>
+        </div>
+        <div class="sector-bar-row">
+          <div class="sector-bar-label">Academia / Research</div>
+          <div class="sector-bar-track"><div class="sector-bar-fill" style="width:10%; background: var(--track-research);"></div></div>
+          <div class="sector-bar-pct">10%</div>
+        </div>
+        <div class="sector-bar-row">
+          <div class="sector-bar-label">Further Education</div>
+          <div class="sector-bar-track"><div class="sector-bar-fill" style="width:2%; background: var(--text-tertiary); min-width:8px;"></div></div>
+          <div class="sector-bar-pct">2%</div>
+        </div>
+      </div>
+
+      <div class="sector-year-title">Class of 2024: By Sector</div>
+      <div class="sector-bars">
+        <div class="sector-bar-row">
+          <div class="sector-bar-label">Private Sector</div>
+          <div class="sector-bar-track"><div class="sector-bar-fill" style="width:37%; background: var(--accent-green);"></div></div>
+          <div class="sector-bar-pct">37%</div>
+        </div>
+        <div class="sector-bar-row">
+          <div class="sector-bar-label">Non-profit / NGO</div>
+          <div class="sector-bar-track"><div class="sector-bar-fill" style="width:34%; background: var(--columbia-blue);"></div></div>
+          <div class="sector-bar-pct">34%</div>
+        </div>
+        <div class="sector-bar-row">
+          <div class="sector-bar-label">Academia / Research</div>
+          <div class="sector-bar-track"><div class="sector-bar-fill" style="width:13%; background: var(--track-research);"></div></div>
+          <div class="sector-bar-pct">13%</div>
+        </div>
+        <div class="sector-bar-row">
+          <div class="sector-bar-label">Public / Government</div>
+          <div class="sector-bar-track"><div class="sector-bar-fill" style="width:12%; background: var(--accent-amber);"></div></div>
+          <div class="sector-bar-pct">12%</div>
+        </div>
+        <div class="sector-bar-row">
+          <div class="sector-bar-label">Further Education</div>
+          <div class="sector-bar-track"><div class="sector-bar-fill" style="width:4%; background: var(--text-tertiary); min-width:8px;"></div></div>
+          <div class="sector-bar-pct">4%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Field / Industry Breakdown -->
+    <div class="divider"></div>
+    <div class="section-label">By Field or Industry</div>
+    <h2 class="section-title" style="font-size:1.6rem;">Detailed Field Breakdown</h2>
+    <p class="section-intro">Within each broad sector, graduates are distributed across a wide range of specific fields, evidence of how far the climate lens extends.</p>
+
+    <div class="field-grid">
+      <div class="field-block">
+        <h3>Class of 2025: Fields</h3>
+        <div class="field-row"><span class="fname">Government / Public Administration</span><span class="fcount">13</span><span class="fpct">17%</span></div>
+        <div class="field-row"><span class="fname">Energy</span><span class="fcount">9</span><span class="fpct">12%</span></div>
+        <div class="field-row"><span class="fname">Academia: Professionals &amp; Researchers</span><span class="fcount">8</span><span class="fpct">10%</span></div>
+        <div class="field-row"><span class="fname">Communications / Media / Fashion</span><span class="fcount">8</span><span class="fpct">10%</span></div>
+        <div class="field-row"><span class="fname">Community Orgs / Activism / Conservation</span><span class="fcount">5</span><span class="fpct">6%</span></div>
+        <div class="field-row"><span class="fname">Sustainable &amp; Climate Finance / Banking</span><span class="fcount">4</span><span class="fpct">5%</span></div>
+        <div class="field-row"><span class="fname">Consulting</span><span class="fcount">3</span><span class="fpct">4%</span></div>
+        <div class="field-row"><span class="fname">Technology / Decarb / Environmental Services</span><span class="fcount">2</span><span class="fpct">2%</span></div>
+        <div class="field-row"><span class="fname">Manufacturing / Packaging / Industrials</span><span class="fcount">2</span><span class="fpct">2%</span></div>
+        <div class="field-row"><span class="fname">Policy</span><span class="fcount">2</span><span class="fpct">2%</span></div>
+        <div class="field-row"><span class="fname">Intergovernmental / International Affairs</span><span class="fcount">1</span><span class="fpct">1%</span></div>
+        <div class="field-row"><span class="fname">Clean / Climate Tech</span><span class="fcount">1</span><span class="fpct">1%</span></div>
+        <div class="field-row"><span class="fname">Corporate Sustainability</span><span class="fcount">1</span><span class="fpct">1%</span></div>
+        <div class="field-row"><span class="fname">Disaster Risk Management</span><span class="fcount">1</span><span class="fpct">1%</span></div>
+        <div class="field-row"><span class="fname">Entrepreneurship</span><span class="fcount">1</span><span class="fpct">1%</span></div>
+        <div class="field-row"><span class="fname">Food Systems / Agriculture / Farming</span><span class="fcount">1</span><span class="fpct">1%</span></div>
+        <div class="field-row"><span class="fname">Decarbonization</span><span class="fcount">1</span><span class="fpct">1%</span></div>
+      </div>
+      <div class="field-block">
+        <h3>Class of 2024: Fields</h3>
+        <div class="field-row"><span class="fname">Sustainable &amp; Climate Finance / Banking</span><span class="fcount">10</span><span class="fpct">13%</span></div>
+        <div class="field-row"><span class="fname">Energy</span><span class="fcount">10</span><span class="fpct">13%</span></div>
+        <div class="field-row"><span class="fname">Academia: Professionals &amp; Researchers</span><span class="fcount">9</span><span class="fpct">12%</span></div>
+        <div class="field-row"><span class="fname">Government / Public Administration</span><span class="fcount">5</span><span class="fpct">6%</span></div>
+        <div class="field-row"><span class="fname">Policy</span><span class="fcount">4</span><span class="fpct">5%</span></div>
+        <div class="field-row"><span class="fname">Natural Resources / Forestry / Wildlife</span><span class="fcount">4</span><span class="fpct">5%</span></div>
+        <div class="field-row"><span class="fname">Consulting</span><span class="fcount">4</span><span class="fpct">5%</span></div>
+        <div class="field-row"><span class="fname">Clean / Climate Tech</span><span class="fcount">4</span><span class="fpct">5%</span></div>
+        <div class="field-row"><span class="fname">Furthering Education / Academia</span><span class="fcount">3</span><span class="fpct">4%</span></div>
+        <div class="field-row"><span class="fname">Tech / Decarb / Carbon Capture</span><span class="fcount">3</span><span class="fpct">4%</span></div>
+        <div class="field-row"><span class="fname">Circularity</span><span class="fcount">2</span><span class="fpct">2%</span></div>
+        <div class="field-row"><span class="fname">Community Orgs / Activism</span><span class="fcount">2</span><span class="fpct">2%</span></div>
+        <div class="field-row"><span class="fname">Decarbonization</span><span class="fcount">2</span><span class="fpct">2%</span></div>
+        <div class="field-row"><span class="fname">Engineering</span><span class="fcount">2</span><span class="fpct">2%</span></div>
+        <div class="field-row"><span class="fname">Environmental Science</span><span class="fcount">2</span><span class="fpct">2%</span></div>
+        <div class="field-row"><span class="fname">ESG Reporting</span><span class="fcount">2</span><span class="fpct">2%</span></div>
+        <div class="field-row"><span class="fname">Intergovernmental / International Affairs</span><span class="fcount">2</span><span class="fpct">2%</span></div>
+        <div class="field-row"><span class="fname">And 7 more fields</span><span class="fcount">—</span><span class="fpct">1% ea.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROFESSIONAL TRACKS ============ -->
+<section id="tracks">
+  <div class="container">
+    <div class="section-label">Career Pathways</div>
+    <h2 class="section-title">Professional Tracks</h2>
+    <p class="section-intro">To illustrate the broad, burgeoning applications of this degree, here are distinct professional tracks where graduates have landed, each one a different way of applying the climate lens.</p>
+
+    <div class="tracks-grid">
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon" style="background: #E8EEF6; color: var(--track-gov);">&#9878;</div>
+          <div><div class="track-name">Government &amp; Public Administration</div><div class="track-pct">Top field in 2025 at 17%</div></div>
+        </div>
+        <ul class="track-examples">
+          <li>Legislative Fellow, NY State Senate</li>
+          <li>Resiliency Planner, NYC Emergency Management</li>
+          <li>GIS Specialist, NY Office of Parks &amp; Historic Preservation</li>
+          <li>Renewable Energy Siting Specialist, NYS Dept. of Public Service</li>
+          <li>Coastal Resource Specialist, NYS Dept. of State</li>
+          <li>Program Specialist, NJ Dept. of Environmental Protection</li>
+        </ul>
+      </div>
+
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon" style="background: #FEF3E2; color: var(--track-energy);">&#9889;</div>
+          <div><div class="track-name">Energy &amp; Clean Power</div><div class="track-pct">12–13% across both classes</div></div>
+        </div>
+        <ul class="track-examples">
+          <li>Graduate Analyst, Aurora Energy Research</li>
+          <li>Origination Analyst, Onyx Renewables</li>
+          <li>Manager of Operations, Nuclear New York</li>
+          <li>Project Development Analyst, SolMicroGrid</li>
+          <li>Director, Development, Solar Landscape</li>
+          <li>Project Manager, ChargeWheel</li>
+        </ul>
+      </div>
+
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon" style="background: #E8F5EE; color: var(--track-finance);">&#36;</div>
+          <div><div class="track-name">Sustainable Finance &amp; Investment</div><div class="track-pct">13% in 2024 · 5% in 2025</div></div>
+        </div>
+        <ul class="track-examples">
+          <li>Head, Impact Investments, Rwanda Social Security Board</li>
+          <li>Global Environmental &amp; Social Risk Mgmt, JPMorgan Chase</li>
+          <li>Research Origination Analyst, Karbone</li>
+          <li>Investment Manager, PhotonPower Singapore</li>
+          <li>Venture Analyst, Wavemaker / We Carbon</li>
+          <li>Impact Research Associate, Domini Impact</li>
+        </ul>
+      </div>
+
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon" style="background: #F0E8F6; color: var(--track-research);">&#128300;</div>
+          <div><div class="track-name">Research &amp; Academia</div><div class="track-pct">10–12% across both classes</div></div>
+        </div>
+        <ul class="track-examples">
+          <li>Research Fellow, US Department of Energy</li>
+          <li>Research Associate, Lamont-Doherty Earth Observatory</li>
+          <li>Research Staff Assistant, CIESIN</li>
+          <li>Built Environment Researcher, Cornell Atkinson Center</li>
+          <li>Laboratory Coordinator, Johns Hopkins University</li>
+          <li>Climate Curriculum Developer, MIT Open Learning</li>
+        </ul>
+      </div>
+
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon" style="background: #F6E8EE; color: var(--track-consulting);">&#9883;</div>
+          <div><div class="track-name">Consulting &amp; Advisory</div><div class="track-pct">4–5% across both classes</div></div>
+        </div>
+        <ul class="track-examples">
+          <li>Strategic Consultant, Formula Consulting</li>
+          <li>Sustainability Consulting Associate, ERM</li>
+          <li>Consultant, AIDKIT</li>
+          <li>Consultant, UNEP</li>
+          <li>Director of Sustainability, Martinez Consultancy</li>
+          <li>Associate Consultant, APCO Worldwide</li>
+        </ul>
+      </div>
+
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon" style="background: #E8F2F6; color: var(--track-comm);">&#9998;</div>
+          <div><div class="track-name">Communications, Media &amp; Storytelling</div><div class="track-pct">10% in 2025</div></div>
+        </div>
+        <ul class="track-examples">
+          <li>Reporter, Latin America &amp; Caribbean, ImpactAlpha</li>
+          <li>Freelance Journalist</li>
+          <li>Sustainability &amp; Consumer Consultant, Netflix</li>
+          <li>Communications Project Manager &amp; Editor, Rockefeller Brothers Fund</li>
+          <li>Research Fellow, Inside Climate News</li>
+          <li>Retail Performance EMEA Analyst, Balenciaga</li>
+        </ul>
+      </div>
+
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon" style="background: #E8F5EC; color: var(--track-conservation);">&#127795;</div>
+          <div><div class="track-name">Conservation, Wildlife &amp; Natural Resources</div><div class="track-pct">5–6% across both classes</div></div>
+        </div>
+        <ul class="track-examples">
+          <li>Mapping Assistant, Natural Areas Conservancy</li>
+          <li>Research Associate Technician, Billion Oyster Project</li>
+          <li>Nature Program Coordinator, Des Plaines Park District</li>
+          <li>Nature Operations Project Lead, Earthshot Labs</li>
+          <li>Tree Coordinator, Chesapeake Bay Foundation</li>
+          <li>Strategy &amp; Development Coordinator, Circle of Blue</li>
+        </ul>
+      </div>
+
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon" style="background: #F6F0E4; color: var(--track-policy);">&#9881;</div>
+          <div><div class="track-name">Policy, Law &amp; Advocacy</div><div class="track-pct">2–5% across both classes</div></div>
+        </div>
+        <ul class="track-examples">
+          <li>Research &amp; Policy Associate, Center for Earth Ethics</li>
+          <li>Energy Policy Fellow, PowerHouse Texas</li>
+          <li>Energy Justice Analyst, Energy Justice Law and Policy Center</li>
+          <li>Market and Policy Analyst, ConnectDER</li>
+          <li>Public Law &amp; Policy Resident, Akin Gump</li>
+          <li>Climate Justice Associate, Physicians for Social Responsibility LA</li>
+        </ul>
+      </div>
+
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon" style="background: #FBEAE8; color: var(--track-intl);">&#127758;</div>
+          <div><div class="track-name">International Development &amp; Humanitarian</div><div class="track-pct">Roles at the UN, UNDP, IFRC &amp; more</div></div>
+        </div>
+        <ul class="track-examples">
+          <li>Regional Coordinator, Climate Adaptation (APAC), IFRC</li>
+          <li>Portfolio Management &amp; Learning Fellow, UNDP</li>
+          <li>Research and Project Manager, UN Global Compact</li>
+          <li>North American Regional Lead, UNEP-FI</li>
+          <li>Global Energy Specialist, UNDP</li>
+          <li>Policy Fellow, Energy &amp; ICT, US-ASEAN Business Council</li>
+        </ul>
+      </div>
+
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon" style="background: #E8ECF2; color: var(--track-corp);">&#9632;</div>
+          <div><div class="track-name">Corporate Sustainability &amp; ESG</div><div class="track-pct">Roles spanning Fortune 500 to startups</div></div>
+        </div>
+        <ul class="track-examples">
+          <li>Sustainability Manager, Samsung Electronics</li>
+          <li>Sustainability Planner, T.Y. Lin International</li>
+          <li>Sustainability Associate, Artisan Partners</li>
+          <li>ESG &amp; SEC Reporting Analyst, Autodesk</li>
+          <li>Sustainability Intern, GE Vernova</li>
+          <li>Sustainable Product Analyst, ESG-Flo</li>
+        </ul>
+      </div>
+
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon" style="background: #FEF0E4; color: var(--track-community);">&#9825;</div>
+          <div><div class="track-name">Community &amp; Climate Justice</div><div class="track-pct">Grassroots to national organizations</div></div>
+        </div>
+        <ul class="track-examples">
+          <li>Research, Policy &amp; Engagement Specialist, Equal Routes</li>
+          <li>Program Manager, Pact Collective</li>
+          <li>Outreach &amp; Development Coordinator, Black Girl Environmentalist</li>
+          <li>Gen Z Cohort Member, Climate Mental Health Network</li>
+          <li>Senior Associate, Dream.org</li>
+          <li>Conservancy Associate, Teaneck Creek Conservancy</li>
+        </ul>
+      </div>
+
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon" style="background: #E4F4F0; color: var(--track-tech);">&#9881;</div>
+          <div><div class="track-name">Technology, Data &amp; Innovation</div><div class="track-pct">Emerging and growing track</div></div>
+        </div>
+        <ul class="track-examples">
+          <li>Climate Data Trainee, ANG</li>
+          <li>Associate Developer, Invenergy LLC</li>
+          <li>Co-Founder, Digital Logistics Start Up</li>
+          <li>System Engineer, TP-Link</li>
+          <li>User Experience Process Management, JD Logistics</li>
+          <li>Associate, Project Management &amp; Operations, 100+ Accelerator</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CURATED HIGHLIGHTS ============ -->
+<section id="highlights" style="background: var(--warm-gray); border-top: 1px solid var(--border-light);">
+  <div class="container">
+    <div class="section-label">Selected Placements</div>
+    <h2 class="section-title">Curated Full-Time Roles, 2024 &amp; 2025</h2>
+    <p class="section-intro">A hand-picked selection that illustrates the breadth and depth of where graduates land. Every one of these roles represents a different way of bringing climate expertise into the world.</p>
+
+    <div class="highlights-grid">
+      <div class="highlight-item"><strong>Research Fellow</strong> <span class="org">— US Department of Energy (DOE)</span></div>
+      <div class="highlight-item"><strong>Client Development Executive</strong> <span class="org">— Northstar Recycling Company</span></div>
+      <div class="highlight-item"><strong>Strategic Consultant</strong> <span class="org">— Formula Consulting</span></div>
+      <div class="highlight-item"><strong>Research &amp; Project Manager</strong> <span class="org">— United Nations Global Compact</span></div>
+      <div class="highlight-item"><strong>Strategy &amp; Development Coordinator</strong> <span class="org">— Circle of Blue</span></div>
+      <div class="highlight-item"><strong>Assoc. Program Director</strong> <span class="org">— Nat'l Academies of Sciences, Engineering &amp; Medicine</span></div>
+      <div class="highlight-item"><strong>Research Staff Assistant</strong> <span class="org">— CIESIN</span></div>
+      <div class="highlight-item"><strong>Graduate Advisor</strong> <span class="org">— Australian Energy Market Commission</span></div>
+      <div class="highlight-item"><strong>Specialist</strong> <span class="org">— Aurora Energy Research</span></div>
+      <div class="highlight-item"><strong>Program Manager</strong> <span class="org">— Pact Collective</span></div>
+      <div class="highlight-item"><strong>Market and Policy Analyst</strong> <span class="org">— ConnectDER</span></div>
+      <div class="highlight-item"><strong>Sustainability Planner</strong> <span class="org">— T.Y. Lin International</span></div>
+      <div class="highlight-item"><strong>Portfolio Mgmt &amp; Learning Fellow</strong> <span class="org">— UNDP</span></div>
+      <div class="highlight-item"><strong>Regional Coordinator, Climate Adaptation</strong> <span class="org">— IFRC (APAC)</span></div>
+      <div class="highlight-item"><strong>Coastal Resource Specialist</strong> <span class="org">— NYS Dept. of State</span></div>
+      <div class="highlight-item"><strong>Adaptation Specialist</strong> <span class="org">— Tetra Tech</span></div>
+      <div class="highlight-item"><strong>Associate</strong> <span class="org">— The Carbon Trust</span></div>
+      <div class="highlight-item"><strong>Sustainability Consulting Associate</strong> <span class="org">— ERM</span></div>
+      <div class="highlight-item"><strong>Sustainability Manager</strong> <span class="org">— Samsung Electronics</span></div>
+      <div class="highlight-item"><strong>Project Manager</strong> <span class="org">— ChargeWheel</span></div>
+      <div class="highlight-item"><strong>Mapping Assistant</strong> <span class="org">— Natural Areas Conservancy</span></div>
+      <div class="highlight-item"><strong>Research Associate Technician</strong> <span class="org">— Billion Oyster Project</span></div>
+      <div class="highlight-item"><strong>Laboratory Coordinator</strong> <span class="org">— Johns Hopkins University</span></div>
+      <div class="highlight-item"><strong>Sustainability Associate</strong> <span class="org">— Artisan Partners</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUMMER EXPERIENCE ============ -->
+<section id="summer">
+  <div class="container">
+    <div class="section-label">Summer Placements</div>
+    <h2 class="section-title">Summer Experience</h2>
+    <p class="section-intro">During the program, students gain hands-on experience through capstone projects and internships, building the real-world skills and networks that help launch their careers.</p>
+
+    <table class="summer-table">
+      <thead>
+        <tr><th>Summer Placement Type</th><th>2024</th><th>2025</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Internship</td><td>43%</td><td>52%</td></tr>
+        <tr><td>Long-term employment</td><td>8%</td><td>4%</td></tr>
+        <tr><td>Capstone</td><td>49%</td><td>42%</td></tr>
+      </tbody>
+    </table>
+
+    <table class="summer-table">
+      <thead>
+        <tr><th>Summer Sectors</th><th>2024</th><th>2025</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Non-profit / NGO</td><td>30%</td><td>35%</td></tr>
+        <tr><td>Private Sector</td><td>31%</td><td>31%</td></tr>
+        <tr><td>Academia</td><td>29%</td><td>20%</td></tr>
+        <tr><td>Public / Government</td><td>10%</td><td>12%</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider" style="margin-top:3rem;"></div>
+    <div class="section-label">Selected Summer Roles</div>
+
+    <div style="margin-top:1.5rem;">
+      <div class="table-label">Summer 2025: Curated Highlights</div>
+      <div class="highlights-grid" style="margin-top:1rem;">
+        <div class="highlight-item"><strong>Energy Finance Intern</strong> <span class="org">— BloombergNEF</span></div>
+        <div class="highlight-item"><strong>Renewable Energy Intern</strong> <span class="org">— CBRE</span></div>
+        <div class="highlight-item"><strong>Research Assistant</strong> <span class="org">— ClientEarth</span></div>
+        <div class="highlight-item"><strong>Coastal Community Resilience Intern</strong> <span class="org">— Environmental Defense Fund</span></div>
+        <div class="highlight-item"><strong>Operations Intern</strong> <span class="org">— Heineken</span></div>
+        <div class="highlight-item"><strong>Sustainability Consulting Intern</strong> <span class="org">— Turbo Net Zero</span></div>
+        <div class="highlight-item"><strong>Marine Policy Intern</strong> <span class="org">— Wildlife Conservation Society</span></div>
+        <div class="highlight-item"><strong>Director, Development</strong> <span class="org">— Solar Landscape</span></div>
+        <div class="highlight-item"><strong>National Organizing Intern</strong> <span class="org">— WE ACT</span></div>
+        <div class="highlight-item"><strong>Community Partnerships Intern</strong> <span class="org">— NY Battery &amp; Energy Storage Tech Consortium</span></div>
+        <div class="highlight-item"><strong>Sustainability Intern</strong> <span class="org">— SunLife</span></div>
+        <div class="highlight-item"><strong>Project Lead</strong> <span class="org">— Rockefeller Brothers Fund</span></div>
+      </div>
+
+      <div class="table-label" style="margin-top:2rem;">Summer 2024: Curated Highlights</div>
+      <div class="highlights-grid" style="margin-top:1rem;">
+        <div class="highlight-item"><strong>Resident Intern</strong> <span class="org">— Akin Gump Strauss Hauer &amp; Feld LLP</span></div>
+        <div class="highlight-item"><strong>Energy Innovation Intern</strong> <span class="org">— Bezos Earth Fund</span></div>
+        <div class="highlight-item"><strong>Climate Corps Fellow</strong> <span class="org">— Walmart</span></div>
+        <div class="highlight-item"><strong>Summer Associate, Climate Health Observatories</strong> <span class="org">— Rockefeller Foundation</span></div>
+        <div class="highlight-item"><strong>Climate &amp; Biodiversity Fellow</strong> <span class="org">— APCO Worldwide</span></div>
+        <div class="highlight-item"><strong>Corporate Engagement Intern</strong> <span class="org">— Rocky Mountain Institute (RMI)</span></div>
+        <div class="highlight-item"><strong>Senior Associate, Global ESG &amp; Social Risk Mgmt</strong> <span class="org">— JPMorgan &amp; Chase</span></div>
+        <div class="highlight-item"><strong>Summer Intern, Climate Impacts</strong> <span class="org">— NASA GISS</span></div>
+        <div class="highlight-item"><strong>Lead Researcher</strong> <span class="org">— Climate Imaginarium</span></div>
+        <div class="highlight-item"><strong>Research Fellow</strong> <span class="org">— Institute for Marine Research</span></div>
+        <div class="highlight-item"><strong>Capacity-Building Intern</strong> <span class="org">— UNFCCC Youth4Capacity</span></div>
+        <div class="highlight-item"><strong>ESG Reporting Analyst</strong> <span class="org">— Autodesk</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATIONS ============ -->
+<section id="locations" style="background: var(--columbia-blue-mist); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+  <div class="container">
+    <div class="section-label">Geographic Reach</div>
+    <h2 class="section-title">Where Graduates Are Located</h2>
+    <p class="section-intro">Most graduates stay in the New York metro area, but the reach extends nationally and internationally.</p>
+
+    <div class="locations-grid">
+      <div class="location-block">
+        <h3>Class of 2025: Post-Graduation Locations</h3>
+        <div class="location-item"><span>New York City</span><span>45</span></div>
+        <div class="location-item"><span>China</span><span>5</span></div>
+        <div class="location-item"><span>California</span><span>4</span></div>
+        <div class="location-item"><span>New Jersey</span><span>3</span></div>
+        <div class="location-item"><span>Florida</span><span>2</span></div>
+        <div class="location-item"><span>Washington DC</span><span>1</span></div>
+        <div class="location-item"><span>Paris, France</span><span>1</span></div>
+        <div class="location-item"><span>Madrid, Spain</span><span>1</span></div>
+        <div class="location-item"><span>Baltimore, MD</span><span>1</span></div>
+        <div class="location-item"><span>Saudi Arabia</span><span>1</span></div>
+        <div class="location-item"><span>Singapore</span><span>1</span></div>
+        <div class="location-item"><span>Vermont</span><span>1</span></div>
+      </div>
+      <div class="location-block">
+        <h3>Class of 2024: Post-Graduation Locations</h3>
+        <div class="location-item"><span>New York City</span><span>41</span></div>
+        <div class="location-item"><span>Washington DC</span><span>7</span></div>
+        <div class="location-item"><span>San Francisco</span><span>4</span></div>
+        <div class="location-item"><span>Austin, TX</span><span>2</span></div>
+        <div class="location-item"><span>Oakland, CA</span><span>2</span></div>
+        <div class="location-item"><span>Los Angeles</span><span>1</span></div>
+        <div class="location-item"><span>Chicago</span><span>1</span></div>
+        <div class="location-item"><span>London, UK</span><span>1</span></div>
+        <div class="location-item"><span>Dallas, TX</span><span>1</span></div>
+        <div class="location-item"><span>Albany, NY</span><span>1</span></div>
+        <div class="location-item"><span>Hamburg, Germany</span><span>1</span></div>
+      </div>
+    </div>
+
+    <div class="divider" style="margin-top:2.5rem;"></div>
+    <div class="section-label">Summer Placement Locations</div>
+    <table class="summer-table" style="max-width:500px;">
+      <thead>
+        <tr><th>Location</th><th>2024</th><th>2025</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>92%</td><td>92%</td></tr>
+        <tr><td>NYC</td><td>55%</td><td>81%</td></tr>
+        <tr><td>Washington DC</td><td>6%</td><td>0%</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.8rem; color:var(--text-tertiary); margin-top:0.75rem; line-height:1.6;">
+      Other 2024 countries: Germany, Jordan, Philippines, Poland, UK. Other 2024 US cities include Trenton NJ, Palisades NY, San Francisco, Bentonville AR, Philadelphia, Charlottesville VA.<br>
+      Other 2025 countries: Philippines, Netherlands. Other 2025 US cities include White Plains NY, Trenton NJ, Cambridge MA.
+    </p>
+  </div>
+</section>
+
+<!-- ============ APPENDIX: FULL LISTINGS ============ -->
+<section class="appendix" id="appendix">
+  <div class="container">
+    <div class="section-label">Appendix</div>
+    <h2 class="section-title">Complete Placement Listings</h2>
+    <p class="section-intro">The full record: every organization and role reported by graduates of the Classes of 2024 and 2025.</p>
+
+    <!-- Class 2025 Post-Program -->
+    <div class="table-label">Class of 2025: Post-Program Organizations &amp; Job Titles</div>
+    <table class="listing-table">
+      <thead><tr><th>Organization</th><th>Title / Function</th></tr></thead>
+      <tbody>
+        <tr><td>100+ Accelerator</td><td>Associate</td></tr>
+        <tr><td>100+ Accelerator</td><td>Associate, Project Management and Operations</td></tr>
+        <tr><td>Aibee</td><td>Assistant to the CEO</td></tr>
+        <tr><td>ANG</td><td>Climate Data Trainee</td></tr>
+        <tr><td>Aurora Energy Research</td><td>Graduate Analyst</td></tr>
+        <tr><td>Balenciaga</td><td>Retail Performance EMEA Analyst</td></tr>
+        <tr><td>Billion Oyster Project</td><td>Research Associate Technician</td></tr>
+        <tr><td>BizLeaders</td><td>Director of Entrepreneurial Experience</td></tr>
+        <tr><td>Black Girl Environmentalist</td><td>Digital and Programs Assistant</td></tr>
+        <tr><td>BuildQ</td><td>Operations Manager</td></tr>
+        <tr><td>Caitong Securities Asset Management</td><td>Product Manager</td></tr>
+        <tr><td>Cedar Circle Farm and Education Center</td><td>Outreach and Development Coordinator</td></tr>
+        <tr><td>Center for Earth Ethics</td><td>Research and Policy Associate</td></tr>
+        <tr><td>ChargeWheel</td><td>Project Manager</td></tr>
+        <tr><td>Climate Mental Health Network</td><td>Gen Z cohort member</td></tr>
+        <tr><td>Columbia Climate School</td><td>Teaching Assistant</td></tr>
+        <tr><td>Columbia Climate School</td><td>Program Manager, Academic Affairs</td></tr>
+        <tr><td>Columbia University</td><td>Teaching Assistant</td></tr>
+        <tr><td>Cornell Atkinson Center for Sustainability</td><td>Built Environment Researcher</td></tr>
+        <tr><td>CSIS</td><td>Research Associate, Critical Minerals and Security</td></tr>
+        <tr><td>Des Plaines Park District</td><td>Nature Program Coordinator</td></tr>
+        <tr><td>Digital Logistics Start Up</td><td>Co-Founder</td></tr>
+        <tr><td>Ding Darling Wildlife Society</td><td>Development and Communications Intern</td></tr>
+        <tr><td>Domini Impact</td><td>Impact Research Associate</td></tr>
+        <tr><td>Earthshot Labs</td><td>Nature Operations Project Lead</td></tr>
+        <tr><td>Equal Routes</td><td>Research, Policy, and Engagement Specialist</td></tr>
+        <tr><td>ERM</td><td>Sustainability Consulting Associate</td></tr>
+        <tr><td>FIFA</td><td>Sustainability Intern, FIFA26 Future Leaders</td></tr>
+        <tr><td>Finance Team Lead</td><td>Food for Thoughts Innovations</td></tr>
+        <tr><td>First Street Foundation</td><td>Business Development Representative</td></tr>
+        <tr><td>Formula Consulting</td><td>Strategic Consultant</td></tr>
+        <tr><td>GE Vernova</td><td>Sustainability Intern</td></tr>
+        <tr><td>ImpactAlpha</td><td>Reporter, Latin America and the Caribbean</td></tr>
+        <tr><td>JD Logistics</td><td>User Experience Process Management</td></tr>
+        <tr><td>Johns Hopkins University</td><td>Laboratory Coordinator</td></tr>
+        <tr><td>King Abdullah Univ. of Science and Tech</td><td>PhD Student</td></tr>
+        <tr><td>Lamont-Doherty Earth Observatory</td><td>Research Associate</td></tr>
+        <tr><td>Martinez Consultancy</td><td>Director of Sustainability</td></tr>
+        <tr><td>Massachusetts Institute of Technology</td><td>Climate Curriculum Developer, Open Learning</td></tr>
+        <tr><td>N/A</td><td>Freelance Journalist</td></tr>
+        <tr><td>NCDP</td><td>—</td></tr>
+        <tr><td>Netflix</td><td>Sustainability &amp; Consumer Consultant</td></tr>
+        <tr><td>NJ Dept. of Environmental Protection</td><td>Program Analyst</td></tr>
+        <tr><td>NJ Dept. of Environmental Protection</td><td>Program Specialist</td></tr>
+        <tr><td>Nuclear New York</td><td>Manager of Operations</td></tr>
+        <tr><td>NY State Office of Parks, Recreation &amp; Historic Preservation</td><td>GIS Specialist</td></tr>
+        <tr><td>NY State Senate</td><td>Legislative Fellow</td></tr>
+        <tr><td>NYC Economic Development Corporation</td><td>Senior Project Manager</td></tr>
+        <tr><td>NYC Emergency Management Department</td><td>Resiliency Planner</td></tr>
+        <tr><td>NYCEM</td><td>AmeriCorps/NYC Service Fellow</td></tr>
+        <tr><td>NYS Department of Public Service</td><td>Renewable Energy Siting Specialist</td></tr>
+        <tr><td>NYSERDA</td><td>Clean Energy Intern</td></tr>
+        <tr><td>Onyx Renewables</td><td>Origination Analyst</td></tr>
+        <tr><td>Physicians for Social Responsibility LA</td><td>Climate Justice Associate</td></tr>
+        <tr><td>Retrofete</td><td>Logistics Intern</td></tr>
+        <tr><td>Rockefeller Brothers Fund</td><td>Communications Project Manager and Editor</td></tr>
+        <tr><td>Runwise</td><td>Sales Development Representative</td></tr>
+        <tr><td>Rwanda Social Security Board</td><td>Head, Impact Investments</td></tr>
+        <tr><td>Solar Landscape</td><td>Director, Development</td></tr>
+        <tr><td>SolMicroGrid</td><td>Project Development Analyst</td></tr>
+        <tr><td>United Nations</td><td>Program Management Intern</td></tr>
+        <tr><td>United Nations</td><td>Adaptation Finance Intern</td></tr>
+        <tr><td>United Nations</td><td>DGC Climate Communications Intern</td></tr>
+        <tr><td>United Nations</td><td>Forest Financing Intern</td></tr>
+        <tr><td>United Nations</td><td>Program Intern</td></tr>
+        <tr><td>US-ASEAN Business Council</td><td>Policy Fellow, Energy and ICT</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Class 2024 Post-Program -->
+    <div class="table-label">Class of 2024: Post-Program Organizations &amp; Job Titles</div>
+    <table class="listing-table">
+      <thead><tr><th>Organization</th><th>Title / Function</th></tr></thead>
+      <tbody>
+        <tr><td>AIDKIT</td><td>Consultant</td></tr>
+        <tr><td>Akin Gump Strauss Hauer &amp; Feld LLP</td><td>Public Law &amp; Policy Resident</td></tr>
+        <tr><td>APCO Worldwide</td><td>Associate Consultant</td></tr>
+        <tr><td>Artisan Partners</td><td>Sustainability Associate</td></tr>
+        <tr><td>Aurora Energy Research</td><td>Advisory Analyst</td></tr>
+        <tr><td>Australian Energy Market Commission</td><td>Graduate Advisor</td></tr>
+        <tr><td>Autodesk</td><td>ESG &amp; SEC Reporting Analyst</td></tr>
+        <tr><td>Canadian Solar Software</td><td>GL Accountant</td></tr>
+        <tr><td>Center for Climate &amp; Energy Solutions</td><td>Energy Transition Accelerator Coordinator</td></tr>
+        <tr><td>Chesapeake Bay Foundation</td><td>Tree Coordinator</td></tr>
+        <tr><td>CIESIN</td><td>Research Staff Assistant</td></tr>
+        <tr><td>Circle of Blue</td><td>Strategy and Development Coordinator</td></tr>
+        <tr><td>Climate Action Campaign DC</td><td>Government Affairs Program Manager</td></tr>
+        <tr><td>Teaneck Creek Conservancy</td><td>Conservancy Associate</td></tr>
+        <tr><td>Closed Loop Partners</td><td>Office Manager and Administrative Assistant</td></tr>
+        <tr><td>Columbia Business School</td><td>Climate Knowledge Initiative Fellow</td></tr>
+        <tr><td>Columbia Center on Sustainable Investment</td><td>Program Associate</td></tr>
+        <tr><td>Columbia Climate School</td><td>Research Assistant</td></tr>
+        <tr><td>Columbia Climate School</td><td>Program Associate</td></tr>
+        <tr><td>Columbia University</td><td>Associate Teaching</td></tr>
+        <tr><td>Columbia University</td><td>Associate Lecturer, Applications Course</td></tr>
+        <tr><td>ConnectDER</td><td>Market and Policy Analyst</td></tr>
+        <tr><td>Connecticut League of Conservation Voters</td><td>Communication and Outreach Intern</td></tr>
+        <tr><td>Continuing Education</td><td>Continuing Education</td></tr>
+        <tr><td>Dream.org</td><td>Senior Associate</td></tr>
+        <tr><td>Energy Justice Law and Policy Center</td><td>Energy Justice Analyst</td></tr>
+        <tr><td>Enovation Consulting Ltd.</td><td>Sustainability Communications and Content Coordinator</td></tr>
+        <tr><td>ESG-Flo</td><td>Sustainable Product Analyst</td></tr>
+        <tr><td>Fordham Law School</td><td>Fordham JD Candidate</td></tr>
+        <tr><td>Forum Energii</td><td>Just Transition Specialist</td></tr>
+        <tr><td>Global CCS Institute</td><td>Specialist</td></tr>
+        <tr><td>H2Global</td><td>Research Associate</td></tr>
+        <tr><td>Hovland Consulting</td><td>Consultant</td></tr>
+        <tr><td>IFRC</td><td>Regional Coordinator, Climate Change Adaptation (APAC)</td></tr>
+        <tr><td>Invenergy LLC</td><td>Associate Developer</td></tr>
+        <tr><td>Ithaca Clean Energy</td><td>Marketing and Development Manager</td></tr>
+        <tr><td>JPMorgan Chase &amp; Co</td><td>Global Environmental &amp; Social Risk Management</td></tr>
+        <tr><td>Karbone</td><td>Research Origination Analyst</td></tr>
+        <tr><td>Laguardia Community College</td><td>Laboratory Technician</td></tr>
+        <tr><td>Littlefoot Ventures</td><td>Lead, Strategic Partnerships &amp; Client Engagement</td></tr>
+        <tr><td>LSE</td><td>Pursuing MSc Environmental Policy and Regulation</td></tr>
+        <tr><td>Mission Clean Energy</td><td>Origination Associate</td></tr>
+        <tr><td>Mount Sinai Health System</td><td>Grant Coordinator</td></tr>
+        <tr><td>NASA Goddard Space Flight Center</td><td>Climate Interpretation Intern</td></tr>
+        <tr><td>Nat'l Academies of Sciences, Eng. &amp; Medicine</td><td>Associate Program Director</td></tr>
+        <tr><td>New York State Department of State</td><td>Coastal Resource Specialist</td></tr>
+        <tr><td>Northstar Recycling Company, LLC</td><td>Client Development Executive</td></tr>
+        <tr><td>NY Power Authority</td><td>ESG Intern</td></tr>
+        <tr><td>Pact Collective</td><td>Program Manager</td></tr>
+        <tr><td>PhotonPower Singapore Pte Ltd</td><td>Investment Manager</td></tr>
+        <tr><td>PowerHouse Texas</td><td>Energy Policy Fellow</td></tr>
+        <tr><td>PT Hutama Karya (Persero)</td><td>Decarbonization Lead</td></tr>
+        <tr><td>Regional Plan Association</td><td>Associate Planner</td></tr>
+        <tr><td>RMI</td><td>Associate</td></tr>
+        <tr><td>RMI</td><td>Corporate Engagement Manager for Climate Aligned Industries</td></tr>
+        <tr><td>Samsung Electronics</td><td>Sustainability Manager</td></tr>
+        <tr><td>Sports Impact Summit</td><td>International Liaison Advisor</td></tr>
+        <tr><td>T.Y. Lin International</td><td>Sustainability Planner</td></tr>
+        <tr><td>Tetra Tech</td><td>Adaptation Specialist</td></tr>
+        <tr><td>The Carbon Trust</td><td>Associate</td></tr>
+        <tr><td>TP-Link</td><td>System Engineer</td></tr>
+        <tr><td>U.S. Environmental Protection Agency</td><td>Student Trainee</td></tr>
+        <tr><td>U.S. Environmental Protection Agency</td><td>Physical Scientist</td></tr>
+        <tr><td>UNDP</td><td>Portfolio Management &amp; Learning Fellow</td></tr>
+        <tr><td>UNDP</td><td>Energy Finance and Climate Analyst</td></tr>
+        <tr><td>UNDP</td><td>Global Energy Specialist</td></tr>
+        <tr><td>UNEP</td><td>Consultant</td></tr>
+        <tr><td>UNEP-FI</td><td>North American Regional Lead</td></tr>
+        <tr><td>UN Global Compact</td><td>Research and Project Manager</td></tr>
+        <tr><td>University of Virginia</td><td>Research Specialist</td></tr>
+        <tr><td>US Department of Energy (DOE)</td><td>Research Fellow</td></tr>
+        <tr><td>Wavemaker</td><td>Venture Analyst</td></tr>
+        <tr><td>We Carbon</td><td>Venture Analyst</td></tr>
+        <tr><td>World Wildlife Fund-Intern</td><td>Communications Intern</td></tr>
+        <tr><td>Columbia Climate School</td><td>Earth for Life Team Program Manager</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Class 2025 Summer -->
+    <div class="table-label">Class of 2025: Summer Organizations &amp; Job Titles</div>
+    <table class="listing-table">
+      <thead><tr><th>Organization</th><th>Title / Function</th></tr></thead>
+      <tbody>
+        <tr><td>100+ Accelerator, AB InBev</td><td>Fellow</td></tr>
+        <tr><td>ABBinBev (Accelerator+)</td><td>2025 Summer Fellowship Program</td></tr>
+        <tr><td>ABinBev</td><td>2025 Summer Fellowship Program</td></tr>
+        <tr><td>Alti Tiedemann Global</td><td>Impact Intern</td></tr>
+        <tr><td>Analytical Mechanics Associates</td><td>DEVELOP Participant, Research Intern</td></tr>
+        <tr><td>Asia Initiatives</td><td>Intern</td></tr>
+        <tr><td>Billion Oyster Project</td><td>Research Associate Technician: Outdoor Learning</td></tr>
+        <tr><td>Billion Oyster Project</td><td>Seasonal Field Station Coordinator</td></tr>
+        <tr><td>Bloom Farm</td><td>Summer Intern</td></tr>
+        <tr><td>Bloomberg</td><td>BNEF Internship Program</td></tr>
+        <tr><td>BuildIQ</td><td>Business Operations Manager</td></tr>
+        <tr><td>CBRE</td><td>Renewable Energy Intern, Summer</td></tr>
+        <tr><td>Chilean Permanent Mission to the UN</td><td>Environmental Division Intern</td></tr>
+        <tr><td>Cine Mosaic Productions</td><td>Screenplay Development Assistant</td></tr>
+        <tr><td>CUNY &amp; NASA CCRI</td><td>Graduate Research Assistant</td></tr>
+        <tr><td>ClientEarth</td><td>Research Assistant</td></tr>
+        <tr><td>Columbia Center for Sustainable Development</td><td>Intern</td></tr>
+        <tr><td>Columbia Climate School</td><td>Impact Scholar</td></tr>
+        <tr><td>Columbia Climate School</td><td>Mobility and Resilience Conference Intern</td></tr>
+        <tr><td>Columbia Climate School</td><td>Plastics Policy Toolkit Intern</td></tr>
+        <tr><td>Columbia University</td><td>Communications Intern</td></tr>
+        <tr><td>Columbia University</td><td>Casual Student Admin Worker</td></tr>
+        <tr><td>Columbia University Incite</td><td>Internship, Law</td></tr>
+        <tr><td>Docutribe, Inc.</td><td>Social Innovation Fellow Filmmaker</td></tr>
+        <tr><td>EarthShot Labs</td><td>Nature Ops Project Lead</td></tr>
+        <tr><td>ECOGENESIS</td><td>Intern</td></tr>
+        <tr><td>Ecopsychepedia</td><td>Renewable Energy Intern, Canada and Northeast</td></tr>
+        <tr><td>EDF Renewables</td><td>Coastal Community Resilience Intern</td></tr>
+        <tr><td>Environmental Defense Fund</td><td>Intern</td></tr>
+        <tr><td>ETCH Materials</td><td>Sustainability Intern, GE Vernova Corporate Summer 2025</td></tr>
+        <tr><td>GE Vernova</td><td>Procurement Specialist Internship</td></tr>
+        <tr><td>Guanbiao Li</td><td>Operations Intern</td></tr>
+        <tr><td>Heineken</td><td>Climate Fellow</td></tr>
+        <tr><td>Inner Development Goals</td><td>Internship/Fellowship</td></tr>
+        <tr><td>Inside Climate News</td><td>Research Fellow</td></tr>
+        <tr><td>Institute for Marine Research</td><td>Research Fellow</td></tr>
+        <tr><td>Lamont-Doherty Earth Observatory</td><td>Intern</td></tr>
+        <tr><td>Lamont-Doherty Earth Observatory</td><td>Research Assistant</td></tr>
+        <tr><td>Mae Fah Luang Foundation under Royal Patronage</td><td>Intern</td></tr>
+        <tr><td>Mint Finance</td><td>Fundamental Analyst</td></tr>
+        <tr><td>National Center for Disaster Preparedness</td><td>Student Casual</td></tr>
+        <tr><td>National Center for Disaster Preparedness</td><td>Summer Intern</td></tr>
+        <tr><td>NJ Dept. of Environmental Protection</td><td>Spark Internship Program</td></tr>
+        <tr><td>NJ Dept. of Environmental Protection</td><td>Environmental Services Internship</td></tr>
+        <tr><td>NY Battery and Energy Storage Tech Consortium</td><td>Community Partnerships Intern</td></tr>
+        <tr><td>NYC Dept. of Environmental Protection</td><td>Sustainability Graduate Intern</td></tr>
+        <tr><td>New York Power Authority</td><td>Business Development Intern</td></tr>
+        <tr><td>Nourish All</td><td>Program Intern</td></tr>
+        <tr><td>Nuclear New York</td><td>Symposium Coordination Intern</td></tr>
+        <tr><td>NYSERDA</td><td>Student Intern</td></tr>
+        <tr><td>Port Authority of NY and NJ</td><td>Summer Intern, Sustainability</td></tr>
+        <tr><td>Rockaway Initiative for Sustainability and Equity (RISE)</td><td>Summer Intern</td></tr>
+        <tr><td>Rockefeller Brothers Fund</td><td>Project Lead</td></tr>
+        <tr><td>Route17</td><td>Research Intern</td></tr>
+        <tr><td>Runwise</td><td>Sales Development Representative</td></tr>
+        <tr><td>Sabin Center for Climate Change Law</td><td>Policy Research Intern</td></tr>
+        <tr><td>Solar Landscape</td><td>Director, Development</td></tr>
+        <tr><td>SunLife</td><td>Sustainability Intern</td></tr>
+        <tr><td>The Columbia Climate School in the Green Mountain</td><td>Program Assistant</td></tr>
+        <tr><td>The Rockefeller Foundation</td><td>Summer Associate</td></tr>
+        <tr><td>Turbo Net Zero</td><td>Sustainability Consulting Intern</td></tr>
+        <tr><td>United Nations</td><td>Programme Management Intern</td></tr>
+        <tr><td>United Nations</td><td>Public Information Intern</td></tr>
+        <tr><td>UNDRR</td><td>Intern, Programme Management</td></tr>
+        <tr><td>WE ACT for Environmental Justice</td><td>National Organizing Intern</td></tr>
+        <tr><td>Wildlife Conservation Society</td><td>Marine Policy Intern</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Class 2024 Summer -->
+    <div class="table-label">Class of 2024: Summer Organizations &amp; Job Titles</div>
+    <table class="listing-table">
+      <thead><tr><th>Organization</th><th>Title / Function</th></tr></thead>
+      <tbody>
+        <tr><td>Akin Gump Strauss Hauer &amp; Feld LLP</td><td>Resident (Intern)</td></tr>
+        <tr><td>APCO Worldwide LLC</td><td>Climate &amp; Biodiversity Fellow</td></tr>
+        <tr><td>Apex Clean Energy</td><td>Summer Associate</td></tr>
+        <tr><td>Arcadis</td><td>Climate Adaptation Intern</td></tr>
+        <tr><td>Autodesk</td><td>Intern (ESG Reporting Analyst)</td></tr>
+        <tr><td>Browning Environmental Communications</td><td>Environmental Research and Communications Intern</td></tr>
+        <tr><td>Center for Climate and Energy Solutions (C2ES)</td><td>International Intern</td></tr>
+        <tr><td>Climate Imaginarium</td><td>Lead Researcher</td></tr>
+        <tr><td>Climate Policy Initiative</td><td>Climate Finance Intern</td></tr>
+        <tr><td>Columbia Center on Sustainable Investment</td><td>Responsible &amp; Rights-Respecting Land Investments</td></tr>
+        <tr><td>Columbia Climate School</td><td>Student Researcher</td></tr>
+        <tr><td>Columbia University</td><td>Climate, Conflict, &amp; Disaster Resilience Analyst</td></tr>
+        <tr><td>Columbia University</td><td>DRA, Research Assistant</td></tr>
+        <tr><td>ConnectDER</td><td>Market Research Analyst, Intern</td></tr>
+        <tr><td>Dominican Republic Mission in the UN</td><td>Intern</td></tr>
+        <tr><td>Dream.org</td><td>Senior Associate</td></tr>
+        <tr><td>EnerSys</td><td>Sustainability Intern</td></tr>
+        <tr><td>F1R the Girls Media</td><td>Sustainability Communications and Strategy Intern</td></tr>
+        <tr><td>Growald Climate Fund</td><td>Intern</td></tr>
+        <tr><td>Hovland Consulting LLC</td><td>Supporting Associate</td></tr>
+        <tr><td>JPMorgan &amp; Chase Co.</td><td>Senior Associate</td></tr>
+        <tr><td>Lamont-Doherty Earth Observatory</td><td>Intern, ENANDES-Chile Project</td></tr>
+        <tr><td>Lamont-Doherty Earth Observatory</td><td>Researcher</td></tr>
+        <tr><td>Lamont-Doherty Earth Observatory</td><td>Student Researcher</td></tr>
+        <tr><td>N.J. Department of Environmental Protection</td><td>Policy Intern</td></tr>
+        <tr><td>NASA GISS</td><td>Summer Intern</td></tr>
+        <tr><td>NYS Dept of State</td><td>Coastal Management Specialist</td></tr>
+        <tr><td>Northstar Recycling</td><td>Client Development Executive</td></tr>
+        <tr><td>Regional Plan Association</td><td>Offshore Wind Planning Intern</td></tr>
+        <tr><td>Columbia, Resilient Coastal Communities Project</td><td>Intern</td></tr>
+        <tr><td>Columbia, Coastal Resilience</td><td>Research Assistant</td></tr>
+        <tr><td>RMI, Rocky Mountain Institute</td><td>Corporate Engagement Manager</td></tr>
+        <tr><td>RMI, Rocky Mountain Institute</td><td>Intern</td></tr>
+        <tr><td>Sabin Center for Climate Change Law</td><td>Summer Legal Intern</td></tr>
+        <tr><td>SLR Consulting</td><td>ESG Intern</td></tr>
+        <tr><td>Tamer Institute</td><td>Climate Knowledge Initiative Fellow</td></tr>
+        <tr><td>The Earth Institute, Columbia University</td><td>Intern</td></tr>
+        <tr><td>The Human Impacts Institute</td><td>Intern</td></tr>
+        <tr><td>The Rockefeller Foundation</td><td>Summer Associate Climate, Health Observatories</td></tr>
+        <tr><td>UNFCCC Youth4Capacity</td><td>Internship Capacity-Building Subdivision</td></tr>
+        <tr><td>UVA Environmental Inequality Lab</td><td>Research Specialist</td></tr>
+        <tr><td>US Environmental Protection Agency</td><td>Pathways Intern</td></tr>
+        <tr><td>Walmart</td><td>Climate Corps Fellow</td></tr>
+        <tr><td>WE ACT for Environmental Justice</td><td>Thriving Community Technical Assistance Center Intern</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<div class="footer">
+  <div class="footer-school">Columbia Climate School</div>
+  <div class="footer-note">
+    MA in Climate and Society &nbsp;&bull;&nbsp; Classes of 2024 &amp; 2025<br>
+    Employment information as reported by graduates at six months post-graduation.<br>
+    Knowledge rate: 79% (2025) &bull; Report includes students who responded and provided placement information.
+  </div>
+</div>
+
+</body>
+</html>
