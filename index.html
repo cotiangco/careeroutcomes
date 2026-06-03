@@ -422,6 +422,7 @@
     border-radius: 8px;
     background: var(--warm-gray);
     line-height: 1.5;
+    min-height: 4.4rem;
   }
 
   .highlight-item strong {
@@ -447,6 +448,12 @@
     border-collapse: collapse;
     font-size: 0.85rem;
     margin: 1.5rem 0;
+    table-layout: fixed;
+  }
+
+  .summer-table th:first-child,
+  .summer-table td:first-child {
+    width: 56%;
   }
 
   .summer-table th {
@@ -522,6 +529,12 @@
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid var(--border-light);
+    table-layout: fixed;
+  }
+
+  .listing-table th:first-child,
+  .listing-table td:first-child {
+    width: 48%;
   }
 
   .listing-table thead th {
